@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: arulm
+Build-Jdk: 14.0.2
+Implementation-Title: voizfonica
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.iprimed
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/voizfonica
+Created-By: Maven Integration for Eclipse
+
