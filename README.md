@@ -3,7 +3,7 @@
   Minimum System Requirements:
   i5 Processor or New Gen AMD Ryzen, 8 GB RAM, SSD instead of Hard disk.
 
-#Voizfonica Backend:
+# voizfonica Backend:
   Requirements: STS(Spring tool suit) with JAVA JDK v1.8.
   
   open the sts-> import project-> existing maven project, tick add project into workspace -> then click ok.
@@ -12,7 +12,7 @@
   
   
   
-#Voizfonica Frontend:
+# voizfonica Frontend:
   
   Requirements: Angular CLI, Node js, Node js Package manager.
   
