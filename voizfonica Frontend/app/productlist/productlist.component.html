@@ -1,0 +1,33 @@
+
+<p>welcome logged in as:{{a}}</p>
+<div class="container">
+    <h2>user list</h2>
+    <p>Admin action to perform crud operations</p>            
+    <table class="table table-striped">
+      <thead>
+        <tr>
+            <th>id</th>
+          <th>emailId</th>
+          <th>userName</th>
+          <th>password</th>
+          <th>actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of _productlist">
+        <!-- <tr *ngFor="let product of _productlist"> -->
+          <td>{{product.id}}</td>
+          <td>{{product.emailId}}</td>
+          <td>{{product.userName}}</td>
+          <td>{{product.password}}</td>
+          <td>
+              <button type="button" class="btn btn-primary" (click)="goToEditProduct(product.id)">Edit</button>&nbsp;&nbsp;&nbsp;
+              <button type="button" class="btn btn-info" (click)="goToViewProduct(product.id)">View</button>&nbsp;&nbsp;&nbsp;
+              <button type="button" class="btn btn-danger" (click)="deleteProduct(product.id)">Delete</button>
+          </td>
+        </tr>    
+      </tbody>
+ 
+    </table>
+    <button type="button" class="btn btn-success" (click)="goToAddProduct()">Add new user</button>&nbsp;&nbsp;
+  </div>

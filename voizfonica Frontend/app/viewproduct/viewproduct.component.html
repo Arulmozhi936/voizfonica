@@ -1,0 +1,25 @@
+
+
+<div class="container">
+    <h2>Product list</h2>
+    <p>Use action to perform crud operations</p>            
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>emailId</th>
+          <th>userName</th>
+          <th>password</th>        
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{product.id}}</td>
+          <td>{{product.emailId}}</td>
+          <td>{{product.userName}}</td>
+          <td>{{product.password}}</td>          
+        </tr>                
+      </tbody> 
+    </table>    
+    <button type="button" class="btn btn-primary" (click)="gotolist()">back</button>
+  </div>
