@@ -1,0 +1,43 @@
+
+<!----prepaid-->
+<div class="container">
+    <h2><b>Update prepaid</b></h2>
+    <form #adduserform="ngForm" (ngSubmit)="updateSubscriberformsubmit()">
+       
+        <div class="form-group">
+            <label for="id">id:</label>
+            <input type="text" class="form-control" required [(ngModel)]="subscriber.id" name="id" disabled>
+        </div>
+        <div class="form-group">
+            <label for="emailId:">emailId:</label>
+            <input type="text" class="form-control" required [(ngModel)]="subscriber.emailId" name="emailId">
+        </div>
+        <div class="form-group">
+            <label for="userName">username:</label>
+            <input type="text" class="form-control" required [(ngModel)]="subscriber.userName" name="userName">
+        </div>
+        <div class="form-group">
+        <label for="password">password:</label>
+        <input type="text" class="form-control" required [(ngModel)]="subscriber.password" name="password">
+    </div>
+
+
+    <!---mobile num-->
+    <div class="form-group">
+        <label for="mobileNum">mobile num:</label>
+        <input type="text" class="form-control" required [(ngModel)]="subscriber.mobileNum" name="mobileNum">
+    </div>
+
+    <!---type of user-->
+
+    <div class="form-group">
+        <label for="typeOfUser">typt of user:</label>
+        <input type="text" class="form-control" required [(ngModel)]="subscriber.typeOfSubscriber" name="typeOfSubscriber">
+    </div>
+
+
+
+    <button type="submit" class="btn btn-success">Update plan</button>
+    <button type="button" class="btn btn-primary" (click)="gotolistsubscriber()">back</button>
+    </form>
+</div>

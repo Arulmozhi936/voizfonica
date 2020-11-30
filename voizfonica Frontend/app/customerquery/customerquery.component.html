@@ -1,0 +1,194 @@
+<div class="container-fluid sticky-nav-wrapper" style="background-color: #204d81;height: 80px;width: 100%;">
+  <nav class="navbar navbar-expand-lg navbar-dark  static-top">
+   <div class="container">
+     <a class="navbar-brand" href="#">
+           <img src="/assets/img/logo.jpeg" height="58px" width="58px" alt="logo">
+         </a>
+         <h1 style="color: white;">VOIZFONICA</h1>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="/loginsuccess">Home
+                    
+                  </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="/myplan">Myplans</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link"  href="/userplan">Recharge</a>
+            </li>
+            
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="/bill">Bill</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" type="button"  (click)="trans();">RechargeHistory</a>
+            </li>
+
+            <li class="nav-item active">
+              <a class="nav-link" href="/customerquery">Any Query? <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href='/home'>Logout</a>
+            </li>
+           
+                <li class="nav-item">
+              <a class="nav-link" href='/profile'>
+                Hello! {{firstName}} {{lastName}}<br>
+                
+              </a>
+            </li>
+      
+          </ul>
+        </div>
+   </div>
+ </nav>
+</div>
+
+<app-chat></app-chat>
+  <div class="cl" style="background-color: #89a5c5;">
+    <br><br>
+    <h2 style="padding-left:200px ;">Frequently Asked Questions:</h2>
+    <div class="container">
+    <div class="accordion">
+      <div>
+        <input type="radio" name="example_accordion" id="section1" class="accordion__input">
+        <label for="section1" class="accordion__label">What is Open Network?</label>
+        <div class="accordion__content">
+          <p>Solution</p>
+          <p>
+            Open Network is a bold new initiative by us to build a better network. In this Initiative lies a conviction that we want to be and can be better than what we are today. It also means making our customers our partners such that they stand shoulder to shoulder with us to achieve this ambition. We are opening up our network information for you to tell us where the gaps are, so that we can improve our coverage and give you an experience like no other.
+          </p>
+        </div>
+      </div>
+      <div>
+        <input type="radio" name="example_accordion" id="section2" class="accordion__input">
+        <label for="section2" class="accordion__label">Will Open Network help me get faster internet?</label>
+        <div class="accordion__content">
+          <p>Solution</p>
+          <p>
+            Open Network portal will allow you to check network coverage in your area. It will also show you the network towers that are present near the building where you live. In case there is 4G/3G coverage in your area and still you are experiencing slow data speeds, we request you to kindly raise an issue by clicking here and we would be delighted to help you.
+          </p>
+        </div>
+      </div>
+      <div>
+        <input type="radio" name="example_accordion" id="section13" class="accordion__input">
+        <label for="section13" class="accordion__label">What does the term “Towers forcibly shutdown” mean?</label>
+        <div class="accordion__content">
+          <p>Solution</p>
+          <p>
+            These are the locations where we had towers but now they have been shut down by property owners or relevant authorities. We want to ensure that our customers do not face any network issues and hence want to setup a mobile tower here. So if the network map shows such a location in your area and you can help us get permissions to setup a mobile tower here, we would be obliged if you could share the lead with us.
+          </p>
+        </div>
+      </div>
+      <div>
+        <input type="radio" name="example_accordion" id="section14" class="accordion__input">
+        <label for="section14" class="accordion__label">What is Project Leap?</label>
+        <div class="accordion__content">
+          <p>Solution</p>
+          <p>
+            Project leap is our biggest network transformation program aimed at delivering a world class network. This strategic program will see an investment of Rs. 60,000 crores in the next 3 years on the back of Rs. 1,60,000 crores that we have already invested. We are confident that this program will help airtel build a dynamic network that will significantly improve the quality of our voice and data services across the length and breadth of the country.
+          </p>
+        </div>
+      </div>
+      <div>
+        <input type="radio" name="example_accordion" id="section11" class="accordion__input">
+        <label for="section11" class="accordion__label">voizfonica website shows that there is 4G in my city, then why am I not getting 4G network in my area?</label>
+        <div class="accordion__content">
+          <p>Solution</p>
+          <p>
+            Through Open Network, our endeavor is to ensure seamless data coverage across the length and breadth of the city. If there is 4G/3G coverage in your area and you are experiencing slow data speeds, it could be because of many reasons. We request you to kindly raise an issue by clicking here and we would be delighted to resolve it.
+          </p>
+        </div>
+      </div>
+      
+      <div>
+        <input type="radio" name="example_accordion" id="section3" class="accordion__input">
+        <label for="section3" class="accordion__label">How can I report a network issue?</label>
+        <div class="accordion__content">
+          <p>Solution</p>
+          <p>
+            If you are facing a network issue in your area, you can go to the network map on “My Network” tab, drop a pin at the exact location and report an issue. Alternatively, you can click here and we would be glad to assist you.
+          </p>
+        </div>
+      </div>
+      <div>
+        <input type="radio" name="example_accordion" id="section4" class="accordion__input">
+        <label for="section4" class="accordion__label">Will Open Network help me get cheaper call rates?</label>
+        <div class="accordion__content">
+          <p>Solution</p>
+          <p>
+            Open Network can help to provide network related information and address network related issues. It does not provide any tariff related information. For such information, please visit www.voizfonica.in
+          </p>
+        </div>
+      </div>
+      <div>
+        <input type="radio" name="example_accordion" id="section5" class="accordion__input">
+        <label for="section5" class="accordion__label">How will I know my network complaint has been resolved?</label>
+        <div class="accordion__content">
+          <p>Solution</p>
+          <p>
+            Every time you report a network related issue, a service request is generated and the service request number is shared with you. Once the complaint has been resolved, you will be duly notified about the resolution. You can also track your complaint using this SR number.
+          </p>
+        </div>
+      </div>
+      <div>
+        <input type="radio" name="example_accordion" id="section6" class="accordion__input">
+        <label for="section6" class="accordion__label">I can help you with a new tower location? What should I do?</label>
+        <div class="accordion__content">
+          <p>Solution</p>
+          <p>
+            To share a new tower location, please go to “My Network” tab, drop a pin within 150 meters of a “Towers Needed” icon, share your details and click submit.
+          </p>
+        </div>
+      </div>
+      <div>
+        <input type="radio" name="example_accordion" id="section7" class="accordion__input">
+        <label for="section7" class="accordion__label">What does the term “Towers Needed” mean?</label>
+        <div class="accordion__content">
+          <p>Solution</p>
+          <p>
+            These are the locations where we have identified network issues and the only way to resolve them is to install a new tower. However, we have not been able to acquire a tower location in the area and this is where we seek your help. So if the network map shows such a location in your area and you can help us get permissions to setup a mobile tower here, we would be obliged if you could share the lead with us. 
+          </p>
+        </div>
+      </div>
+      <div>
+        <input type="radio" name="example_accordion" id="section8" class="accordion__input">
+        <label for="section8" class="accordion__label">What does the term “Towers Upgrading” mean?</label>
+        <div class="accordion__content">
+          <p>Solution</p>
+          <p>
+            These are the towers where we are in the process of upgrading them from 2G internet to 4G/3G network. This means that if the network map shows such a tower in your area, you will be able to experience high speed data on your devices once the upgrading process completes.
+          </p>
+        </div>
+      </div>
+      <div>
+        <input type="radio" name="example_accordion" id="section9" class="accordion__input">
+        <label for="section9" class="accordion__label">The portal is showing good coverage in my area, but I am still facing an issue. What should I do?</label>
+        <div class="accordion__content">
+          <p>Solution</p>
+          <p>
+            It is unfortunate that despite having good coverage in your area, you have to face a network issue. This could be due to multiple reasons like network congestion, topography changes or power outages. We would be happy to address your concern and request you to click here and report your issue.
+          </p>
+        </div>
+      </div>
+      <div>
+        <input type="radio" name="example_accordion" id="section10" class="accordion__input">
+        <label for="section10" class="accordion__label">Will Open Network reduce call drops?</label>
+        <div class="accordion__content">
+          <p>Solution</p>
+          <p>
+            Open Network will definitely improve your network experience. Open Network has been created exactly for that purpose. You can raise a network issue by clicking here.
+          </p>
+        </div>
+      </div>
+    
+    </div>
+    </div>
+    </div>
+    
+  

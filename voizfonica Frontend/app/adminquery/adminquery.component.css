@@ -1,0 +1,38 @@
+.chat{
+  margin-top: 2rem ;
+}
+
+div.chat-content{
+  border-radius: .25rem;
+  height: 30rem;
+  width:45rem;
+  margin-bottom: 2rem;
+}
+.card{
+  height: 100%;
+}
+  .nav-item{
+    font-size: 17px;
+    padding: 5px;
+    height:55px;
+  }
+  .container-left {
+    /* border: 2px solid #dedede; */
+    /* background-color: lightgreen;*/
+    /* border-radius: 15px 1px 15px 15px;  */
+    padding: 5px;
+    margin: 10px 0;
+    float:right;
+    width:50%;
+    text-align: right;
+  }
+  .container-right {
+    /* border: 2px solid #dedede; */
+    /* background-color: cyan; */
+    /* border-radius: 1px 15px 15px 15px; */
+    padding: 5px;
+    margin: 10px 0;
+    float:left;
+    width:50%;
+    text-align: left;
+  }
