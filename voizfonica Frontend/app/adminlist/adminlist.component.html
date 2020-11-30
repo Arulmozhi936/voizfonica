@@ -1,0 +1,85 @@
+<div class="container-fluid sticky-nav-wrapper" style="background-color: #204d81;height: 80px;width: 100%;">
+  <nav class="navbar navbar-expand-lg navbar-dark  static-top">
+   <div class="container">
+     <a class="navbar-brand" href="#">
+           <img src="/assets/img/logo.jpeg" height="58px" width="58px" alt="logo">
+         </a>
+         <h1 style="color: white;">VOIZFONICA</h1>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="/admindashboard">Home
+                    
+                  </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/query">Customer Queries</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="/userlist">Customer's Details</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/adminlist">Admin's Details  <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/offers">Offers and Packs</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href='/home'>Logout</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href='/profile'>
+                Hello! {{firstName}}<br>
+                
+              </a>
+            </li>
+          </ul>
+        </div>
+   </div>
+ </nav>
+</div>
+
+
+<div class="container">
+  <h2>Admin DATA</h2>
+  <p>Use action to perform Crud operations:</p> 
+  <button type="button"  class="btn btn-success" routerLink="/addadmin">ADD NEW ADMIN</button>           
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Gender</th>
+        <th>Mob No</th>
+        <th>Adhar No</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let admins of admins" >
+          <td>{{admins.adminId}}</td>
+        <td>{{admins.firstName}}</td>
+        <td>{{admins.lastName}}</td>
+        <td>{{admins.email}}</td>
+        <td>{{admins.password}}</td>
+        <td>{{admins.gender}}</td>
+        <td>{{admins.mobileNumber}}</td>
+        <td>{{admins.adharNumber}}</td>
+        <td>
+          <button type="button" class="btn btn-primary"  routerLink="/editadmin" (click)="gotoeditadmin(admins.adminId)" >EDIT</button>&nbsp;&nbsp;
+          <!-- <button type="button" class="btn btn-info">VIEW</button>&nbsp;&nbsp; --><br><br>
+          <button type="button" class="btn btn-danger"  (click)="deleteAdmin(admins.adminId)">DELETE</button>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
+  
+</div>
+<router-outlet></router-outlet>

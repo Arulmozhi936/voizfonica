@@ -1,0 +1,86 @@
+
+<div class="container-fluid sticky-nav-wrapper" style="background-color: #204d81;height: 80px;width: 100%;">
+  <nav class="navbar navbar-expand-lg navbar-dark  static-top">
+   <div class="container">
+     <a class="navbar-brand" href="#">
+           <img src="/assets/img/logo.jpeg" height="58px" width="58px" alt="logo">
+         </a>
+         <h1 style="color: white;">VOIZFONICA</h1>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+     <div class="collapse navbar-collapse" id="navbarResponsive">
+       <ul class="navbar-nav ml-auto">
+         <li class="nav-item ">
+           <a class="nav-link" href="/home">Home
+             
+               </a>
+         </li>
+         <!-- <li class="nav-item">
+           <a class="nav-link" href="#">About</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#">Services</a>
+         </li>-->
+         <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+         <li class="nav-item ">
+           <a class="nav-link" href="/contact">Supports & Contact Us</a>
+         </li>
+         <!-- <li class="nav-item"> 
+           <a class="nav-link" routerLink=''>Contact Us</a>
+         </li> -->
+         <li class="nav-item">
+           <a class="nav-link" routerLink='/login'>User Login</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" routerLink='/registration'>User SignUp</a>
+         </li>
+         <li class="nav-item active">
+           <a class="nav-link" routerLink='/adminlogin'>Admin Login <span class="sr-only">(current)</span></a>
+         </li>
+         <!-- <li class="nav-item">
+           <a class="nav-link" routerlink='/adminlogin'>Admin Login</a>
+         </li> -->
+       </ul>
+     </div>
+   </div>
+ </nav>
+</div>  
+
+<div class="image">
+  <!-- <img src="assets/img/administrator.jpg" height="640px" width="1111px" align="right"/> -->
+  <img src="assets/img/footimg.jpg" height="645px" width="1519px" align="right"/>
+</div>
+
+<div class="bg">
+<div  style="min-width: 70%;min-height: 180%;">
+<div class="contain">
+    <div class="containers" style="max-width: 600px;">
+    
+        <h2>ADMIN LOGIN</h2>
+        <form #loginform="ngForm" (ngSubmit)="loginAdmin()">
+          {{loginform.form.valid}}
+          <div class="form-group">
+            <label for="adminid">ADMIN ID:</label>
+            <input type="number" class="form-control" id="adminid" placeholder="Enter ID" name="adminid">
+          </div>
+          <label for="email">Admin Email:</label>
+          <input type="text" class="form-control"  placeholder="Enter email" name="email" [(ngModel)]="admins.email" required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" #email="ngModel" 
+          [class.is-invalid]="email.invalid && email.touched" >
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" [(ngModel)]="admins.password">
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" name="remember"> Remember me</label>
+          </div>
+          <button [disabled]="loginform.form.invalid" type="submit" class="btn btn-success" >LOGIN</button>
+          <small class="float-right"> <a  href="/adminregistration" routerLinkActive="router-link-active" > <strong style="color:white;">New admin ? Register here</strong></a> </small>
+   
+        </form>
+      </div>
+      </div>
+    </div>
+</div>
