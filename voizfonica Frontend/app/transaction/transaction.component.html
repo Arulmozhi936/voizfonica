@@ -1,0 +1,95 @@
+<div class="container-fluid sticky-nav-wrapper" style="background-color: #204d81;height: 80px;width: 100%;">
+  <nav class="navbar navbar-expand-lg navbar-dark  static-top">
+   <div class="container">
+     <a class="navbar-brand" href="#">
+           <img src="/assets/img/logo.jpeg" height="58px" width="58px" alt="logo">
+         </a>
+         <h1 style="color: white;">VOIZFONICA</h1>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/loginsuccess">Home
+                    
+                  </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="/viewprepaid">Myplans</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link"  href="/userplan">Recharge</a>
+            </li>
+            <li class="nav-item  active">
+              <a class="nav-link" type="button"  >RechargeHistory <span class="sr-only">(current)</span></a>
+            </li>
+            <!-- <li class="nav-item">(click)="trans();"
+              <a class="nav-link" href="/bill">Bill</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="/customerquery">Any Query?</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href='/home'>Logout</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href='/profile'>
+                Hello! {{firstName}} {{lastName}}<br>
+                
+              </a>
+            </li>
+          </ul>
+        </div>
+   </div>
+ </nav>
+</div>
+
+<div class="hel" style="background-color: rgb(172, 213, 247);">
+
+<br><br><br>
+<div class="accordion">
+
+
+<div class="body">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2>Recharge History</h2>
+      </div>
+      <div class="panel-body">
+        <table id="example" class="table table-danger table-bordered table-sm row-border hover" cellspacing="0" width="100%">
+  
+          <thead>
+            <tr>
+              <th>Mobile No</th>
+              <th >Service</th>
+              <th >Cost</th>
+              <th >Validity</th>
+              <th >Benefits</th>
+              <th>Email ID</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let payment of payments | async">
+            <!-- <tr > -->
+            <tr *ngIf="payment.emailId==mes">      
+             <td>{{payment.phone}}</td>
+              <td>{{payment.service}}</td>
+              <td>{{payment.cost}}</td>
+              <td>{{payment.validity}}&nbsp;days</td>
+              <td>{{payment.benifits}}</td>            
+              <td>{{payment.emailId}}</td>
+              </tr>
+          
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- <div class="but">
+      <button class="btn btn-info" style="font-size: 25px;"  (click)="goback()" routerLinkActive="active" >BACK</button>
+    </div> -->
+    </div>
+
+  </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   
+</div>
