@@ -1,0 +1,26 @@
+
+<p>add dongle works!</p>
+<div class="container">
+    <h2>new dongle</h2>
+    <form #adduserform="ngForm" (ngSubmit)="addDongleformsubmit()">
+     <!-- //   {{dongle | json}} -->
+        <div class="form-group">
+            <label for="id">id:</label>
+            <input type="text" class="form-control" required [(ngModel)]="dongle.id" name="id">
+        </div>
+        <div class="form-group">
+            <label for="emailId">plan:</label>
+            <input type="text" class="form-control" required [(ngModel)]="dongle.emailId" name="emailId">
+        </div>
+        <div class="form-group">
+            <label for="userName">validity:</label>
+            <input type="text" class="form-control" required [(ngModel)]="dongle.userName" name="userName">
+        </div>
+        <div class="form-group">
+        <label for="password">benifits</label>
+        <input type="text" class="form-control" required [(ngModel)]="dongle.password" name="password">
+    </div>
+    <button type="submit" class="btn btn-success">submit</button>
+    <button type="button" class="btn btn-primary" (click)="gotolistdongle()">back</button>
+    </form>
+</div>
