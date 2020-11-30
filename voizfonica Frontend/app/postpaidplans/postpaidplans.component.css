@@ -1,0 +1,14 @@
+.col-md-3:hover{
+  background-color: whitesmoke;
+  }
+  p:hover, h1:hover, a:hover {
+      background-color: palevioletred;
+    }
+    .well {
+      cursor: pointer
+  }
+    .well.hover,
+    .well :hover{
+      box-shadow :0 20px 20px  turquoise;
+    }
+    

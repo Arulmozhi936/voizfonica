@@ -1,0 +1,27 @@
+.bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: -webkit-linear-gradient(left, #3873b6, #92b5c0);
+    font-family: 'Nunito', sans-serif;
+    
+}
+.container{
+    justify-content: center;
+     /* height: 800px;
+    width: 800px;
+    padding: 100px;  */
+
+}
+.containers{
+    justify-content: center;
+     height: 648px;
+    width: 800px;
+    padding: 40px; 
+
+}
+
+.nav-item{
+    font-size: 18px;
+    padding: 5px;
+  }
