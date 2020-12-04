@@ -1,0 +1,67 @@
+<div class="container-fluid sticky-nav-wrapper" style="background-color: #204d81;height: 80px;width: 100%;">
+  <nav class="navbar navbar-expand-lg navbar-dark  static-top">
+   <div class="container">
+     <a class="navbar-brand" href="#">
+           <img src="/assets/img/logo.jpeg" height="58px" width="58px" alt="logo">
+         </a>
+         <h1 style="color: white;">VOIZFONICA</h1>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="/admindashboard">Home
+                   
+                  </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/adminquery">Customer Queries</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/userlist">Customer's Details</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="/adminlist">Admin's Details</a>
+            </li> -->
+            <li class="nav-item active">
+              <a class="nav-link" href="/prepaidlist">Offers and Packs  <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href='/home'>Logout</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href='/profile'>
+               <br>
+                
+              </a>
+            </li>
+          </ul>
+        </div>
+   </div>
+ </nav>
+</div>
+
+<div class="container">
+    <h2>Prepaid plan list</h2>
+    <p>Use action to perform crud operations</p>            
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>plan</th>
+          <th>validity</th>
+          <th>benifits</th>        
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{prepaid.id}}</td>
+          <td>{{prepaid.emailId}}</td>
+          <td>{{prepaid.userName}}</td>
+          <td>{{prepaid.password}}</td>          
+        </tr>                
+      </tbody> 
+    </table>    
+    <button type="button" class="btn btn-primary" (click)="gotoprepaidlist()">back</button>
+  </div>

@@ -1,0 +1,29 @@
+
+
+
+<div class="container">
+    <h2>subscriber list list</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>emailId</th>
+          <th>userName</th>
+          <th>password</th> 
+          <th>mobile num</th>
+          <th>type of user</th>       
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{subscriber.id}}</td>
+          <td>{{subscriber.emailId}}</td>
+          <td>{{subscriber.userName}}</td>
+          <td>{{subscriber.password}}</td>    
+          <td>{{subscriber.mobileNum}}</td>  
+          <td>{{subscriber.typeOfSubscriber}}</td>       
+        </tr>                
+      </tbody> 
+    </table>    
+    <button type="button" class="btn btn-primary" (click)="gotolist()">back</button>
+  </div>

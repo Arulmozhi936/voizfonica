@@ -1,0 +1,134 @@
+<div class="container-fluid sticky-nav-wrapper" style="background-color: #204d81;height: 80px;width: 100%;">
+  <nav class="navbar navbar-expand-lg navbar-dark  static-top">
+   <div class="container">
+     <a class="navbar-brand" href="#">
+           <img src="/assets/img/logo.jpeg" height="58px" width="58px" alt="logo">
+         </a>
+         <h1 style="color: white;">VOIZFONICA</h1>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="/loginsuccess">Home
+                    
+                  </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="/viewprepaid">Myplans</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link"  href="/userplan">Recharge</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="/bill">Bill</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="/customerquery">Any Query?</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href='/home'>Logout</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href='/profile'> <span class="sr-only">(current)</span>
+                Hello! {{firstName}}<br>
+                
+              </a>
+            </li>
+          </ul>
+        </div>
+   </div>
+ </nav>
+</div>
+
+<div class="back" style="background-color: rgb(202, 225, 243);" >
+  <br>
+  <div class="profile">
+    <div class="container emp-profile">
+    
+        
+        <form method="post">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-img">
+                        <img src="assets/img/img1.jpg" alt="customer"/>
+                        
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="profile-head">
+                                <h5>
+                                   {{firstName}} {{lastName}}
+                                </h5>
+                                <h6>
+                                    Voizfonica Customer
+                                </h6>
+                               
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    
+                </div>
+                <div class="col-md-8">
+                    <div class="tab-content profile-tab" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                  
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>First Name</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>{{firstName}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Last Name</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>{{lastName}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Email</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>{{email}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Phone</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>{{mobileNumber}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-md-6">
+                                          <label>Adhar Number</label>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <p>{{adharNumber}}</p>
+                                      </div>
+                                  </div>
+                                    
+                        </div>
+                        
+                    </div>
+                </div>
+            </div><br><br>
+        </form>           
+    </div><br>
+    </div></div>

@@ -1,0 +1,8 @@
+.bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: -webkit-linear-gradient(left, #965396, #84e5e9);
+    font-family: 'Nunito', sans-serif;
+
+}

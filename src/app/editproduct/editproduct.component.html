@@ -1,0 +1,25 @@
+
+<div class="container">
+    <h2><b>Update user</b></h2>
+    <form #adduserform="ngForm" (ngSubmit)="updateProductformsubmit()">
+       
+        <div class="form-group">
+            <label for="id">id:</label>
+            <input type="text" class="form-control" required [(ngModel)]="product.id" name="id" disabled>
+        </div>
+        <div class="form-group">
+            <label for="emailId:">emailId:</label>
+            <input type="text" class="form-control" required [(ngModel)]="product.emailId" name="emailId">
+        </div>
+        <div class="form-group">
+            <label for="userName">username:</label>
+            <input type="text" class="form-control" required [(ngModel)]="product.userName" name="userName">
+        </div>
+        <div class="form-group">
+        <label for="password">password:</label>
+        <input type="text" class="form-control" required [(ngModel)]="product.password" name="password">
+    </div>
+    <button type="submit" class="btn btn-success">Update</button>
+    <button type="button" class="btn btn-primary" (click)="gotolist()">back</button>
+    </form>
+</div>

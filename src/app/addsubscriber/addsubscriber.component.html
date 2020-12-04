@@ -1,0 +1,34 @@
+
+<p>add subscriber works!</p>
+<div class="container">
+    <h2>new prepaid</h2>
+    <form #adduserform="ngForm" (ngSubmit)="addSubscriberformsubmit()">
+     <!-- //   {{prepaid | json}} -->
+        <div class="form-group">
+            <label for="id">id:</label>
+            <input type="text" class="form-control" required [(ngModel)]="subscriber.id" name="id">
+        </div>
+        <div class="form-group">
+            <label for="emailId">email Id:</label>
+            <input type="text" class="form-control" required [(ngModel)]="subscriber.emailId" name="emailId">
+        </div>
+        <div class="form-group">
+            <label for="userName">user name:</label>
+            <input type="text" class="form-control" required [(ngModel)]="subscriber.userName" name="userName">
+        </div>
+        <div class="form-group">
+        <label for="password">password</label>
+        <input type="text" class="form-control" required [(ngModel)]="subscriber.password" name="password">
+    </div>
+    <div class="form-group">
+        <label for="mobileNum">mobile num</label>
+        <input type="text" class="form-control" required [(ngModel)]="subscriber.mobileNum" name="mobileNum">
+    </div>
+    <div class="form-group">
+        <label for="typeOfSubscriber">type of user</label>
+        <input type="text" class="form-control" required [(ngModel)]="subscriber.typeOfSubscriber" name="typeOfSubscriber">
+    </div>
+    <button type="submit" class="btn btn-success">submit</button>
+    <button type="button" class="btn btn-primary" (click)="gotolistsubscriber()">back</button>
+    </form>
+</div>

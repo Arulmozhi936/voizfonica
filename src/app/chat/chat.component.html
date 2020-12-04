@@ -1,0 +1,75 @@
+<div class="color" style="background-color: #97afca;">
+<h1 class="navbar-brand" href="#" style="padding-left: 210px;font-size: xx-large;">Chat with our customer care</h1>
+<br>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarsExample04">
+<ul class="navbar-nav mr-auto">
+ 
+  
+</ul>
+
+</div>
+<main class="chat">
+<div class="container">
+  <div class="chat-content">
+      <div class="card">
+           <!-- <ul class="list-group list-group-flush">
+                    
+                    <li class="list-group-item" *ngFor="let chatMessage of webSocketService.chatMessages">
+                        
+                        <strong>{{chatMessage.user}} :</strong>
+                        <span>{{chatMessage.message}}</span> 
+                       
+                    </li>
+
+                </ul> -->
+                
+                
+                <div *ngFor="let chatMessage of webSocketService.chatMessages">
+                    <div *ngIf="chatMessage.user=='user'"> 
+  
+                      <div class="container-right"> 
+                        <img src="/assets/img/customer.jpeg" height="30px" width="30px">
+                        <strong>{{chatMessage.user}} :</strong> <p>{{chatMessage.message}}</p>
+                       
+                        <!-- <span class="time-right">11:00</span> -->
+                      </div>
+                    </div>
+                    <div *ngIf="chatMessage.user!='user'"> 
+  
+                      <div class="container-left"> 
+                        <img src="/assets/img/admin.jpeg" height="30px" width="30px">
+
+                      <strong>{{chatMessage.user}} :</strong><p>{{chatMessage.message}}</p>
+                      
+                        <!-- <span class="time-right">11:00</span> -->
+                      </div>
+                    </div>
+                  </div>
+  
+              </div>
+          </div>
+          <form  (ngSubmit)="sendMessage(sendForm)" #sendForm="ngForm">  
+              <div class="chat-send-row">
+                  <div class="col-2">Enter the Name:
+                      <input type="text" class="form-control" name="user" id="input-user" ngModel> <br>
+  
+                  </div>
+                  <div class="col-8">Enter the Message:
+                      <input type="text" class="form-control" name="message" id="input-message" ngModel> <br>
+                  </div>
+                  <div class="col-2">
+                      <button type="submit" class="btn btn-primary">Send</button><br><br>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </main></div>
+  
+    
+  
+  
+  

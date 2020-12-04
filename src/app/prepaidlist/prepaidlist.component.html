@@ -1,0 +1,154 @@
+<div class="container-fluid sticky-nav-wrapper" style="background-color: #204d81;height: 80px;width: 100%;padding-left: 190px;padding-top: 7px;">
+  <nav class="navbar navbar-expand-lg navbar-dark  static-top">
+   <div class="container" style="font: size 40px;">
+     <a class="navbar-brand" href="#">
+           <img src="/assets/img/logo.jpeg" height="58px" width="58px" alt="logo">
+         </a>
+         <h1 style="color: white;">VOIZFONICA</h1>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="/admindashboard">Home
+                   
+                  </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/adminquery">Customer Queries</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/userlist">Customer's Details</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="/adminlist">Admin's Details</a>
+            </li> -->
+            <li class="nav-item active">
+              <a class="nav-link" href="/prepaidlist">Offers and Packs  <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href='/home'>Logout</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href='/profile'>
+               <br>
+                
+              </a>
+            </li>
+          </ul>
+        </div>
+   </div>
+ </nav>
+</div>
+<!-- <p>welcome logged in as:{{a}}</p> -->
+<div class="p">
+
+<div class="container">
+  <br>
+    <h2>Prepaid Packs and Offers</h2>
+    <p>Admin action to add prepaid plans</p>            
+    <table >
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>price</th>
+          <th>validity</th>
+          <th>plans</th>
+          <th>actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let prepaid of _prepaidlist">
+        <!-- <tr *ngFor="let prepaid of _prepaidlist"> -->
+          <td>{{prepaid.id}}</td>
+          <td>{{prepaid.emailId}}</td>
+          <td>{{prepaid.userName}}</td>
+          <td>{{prepaid.password}}</td>
+          <td>
+              <button type="button" class="btn btn-primary" (click)="goToEditPrepaid(prepaid.id)">Edit</button>&nbsp;&nbsp;&nbsp;
+              <button type="button" class="btn btn-info" (click)="goToViewPrepaid(prepaid.id)">View</button>&nbsp;&nbsp;&nbsp;
+              <button type="button" class="btn btn-danger" (click)="deletePrepaid(prepaid.id)">Delete</button>
+          </td>
+        </tr>    
+      </tbody>
+ 
+    </table>
+    <button type="button" class="btn btn-success" (click)="goToAddPrepaid()" style="font-size: larger;">Add new plan</button>&nbsp;&nbsp;
+  </div>
+
+<!------------------------------------------------------------------------------------------------->
+  <!----postpaid-->
+  <br>
+  <div class="container">
+    <h2>Postpaid Packs and Offers</h2>
+    <p>Admin action to add prepaid plans</p>            
+    <table >
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>price</th>
+          <th>validity</th>
+          <th>plans</th>
+          <th>actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let postpaid of _postpaidlist">
+        <!-- <tr *ngFor="let prepaid of _prepaidlist"> -->
+          <td>{{postpaid.id}}</td>
+          <td>{{postpaid.emailId}}</td>
+          <td>{{postpaid.userName}}</td>
+          <td>{{postpaid.password}}</td>
+          <td>
+              <button type="button" class="btn btn-primary" (click)="goToEditPostpaid(postpaid.id)">Edit</button>&nbsp;&nbsp;&nbsp;
+              <button type="button" class="btn btn-info" (click)="goToViewPostpaid(postpaid.id)">View</button>&nbsp;&nbsp;&nbsp;
+              <button type="button" class="btn btn-danger" (click)="deletePostpaid(postpaid.id)">Delete</button>
+          </td>
+        </tr>    
+      </tbody>
+ 
+    </table>
+    <button type="button" class="btn btn-success" (click)="goToAddPostpaid()" style="font-size:larger ">Add new plan</button>&nbsp;&nbsp;
+  </div>
+
+
+
+
+
+
+  <!-------------------------->
+  <!----dongle-->
+  <br>
+  <div class="container">
+    <h2>Dongle Packs and Offers</h2>
+    <p>Admin action to add dongle plans</p>            
+    <table >
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>price</th>
+          <th>validity</th>
+          <th>plans</th>
+          <th>actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dongle of _donglelist">
+        <!-- <tr *ngFor="let prepaid of _prepaidlist"> -->
+          <td>{{dongle.id}}</td>
+          <td>{{dongle.emailId}}</td>
+          <td>{{dongle.userName}}</td>
+          <td>{{dongle.password}}</td>
+          <td>
+              <button type="button" class="btn btn-primary" (click)="goToEditDongle(dongle.id)">Edit</button>&nbsp;&nbsp;&nbsp;
+              <button type="button" class="btn btn-info" (click)="goToViewDongle(dongle.id)">View</button>&nbsp;&nbsp;&nbsp;
+              <button type="button" class="btn btn-danger" (click)="deleteDongle(dongle.id)">Delete</button>
+          </td>
+        </tr>    
+      </tbody>
+ 
+    </table>
+    <button type="button" class="btn btn-success" (click)="goToAddDongle()" style="font-size:larger ">Add new plan</button>&nbsp;&nbsp;
+  <br><br><br></div></div>
+  <app-footernew></app-footernew>

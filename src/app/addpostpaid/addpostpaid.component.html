@@ -1,0 +1,25 @@
+<div class="containers">
+<div class="container">
+    <h2>New Postpaid Plan</h2>
+    <form #adduserform="ngForm" (ngSubmit)="addPostpaidformsubmit()">
+     <!-- //   {{prepaid | json}} -->
+        <div class="form-group">
+            <label for="id">id:</label>
+            <input type="text" class="form-control" required [(ngModel)]="postpaid.id" name="id">
+        </div>
+        <div class="form-group">
+            <label for="emailId">plan:</label>
+            <input type="text" class="form-control" required [(ngModel)]="postpaid.emailId" name="emailId">
+        </div>
+        <div class="form-group">
+            <label for="userName">validity:</label>
+            <input type="text" class="form-control" required [(ngModel)]="postpaid.userName" name="userName">
+        </div>
+        <div class="form-group">
+        <label for="password">benifits</label>
+        <input type="text" class="form-control" required [(ngModel)]="postpaid.password" name="password">
+    </div>
+    <button type="submit" class="btn btn-success">submit</button> &nbsp;
+    <button type="button" class="btn btn-primary" (click)="gotolistpostpaid()">back</button>
+    </form>
+</div><br><br><br><br><br><br><br><br><br><br><br><br></div>

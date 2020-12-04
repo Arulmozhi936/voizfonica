@@ -1,0 +1,21 @@
+.bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: -webkit-linear-gradient(left, #929cc7, #1d5faa);
+    font-family: 'Nunito', sans-serif;
+}
+.nav-item{
+    font-size: 18px;
+    padding: 5px;
+  }
+.containers{
+    justify-content: center;
+     height: 648px;
+    width: 900px;
+    padding-left: 520px; 
+
+}
+h3,label,p{
+    color: white;
+}

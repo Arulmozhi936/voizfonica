@@ -1,0 +1,153 @@
+<div class="container-fluid sticky-nav-wrapper" style="background-color: #204d81;height: 80px;width: 100%;">
+  <nav class="navbar navbar-expand-lg navbar-dark  static-top">
+   <div class="container">
+     <a class="navbar-brand" href="#">
+           <img src="/assets/img/logo.jpeg" height="58px" width="58px" alt="logo">
+         </a>
+         <h1 style="color: white;">VOIZFONICA</h1>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+     <div class="collapse navbar-collapse" id="navbarResponsive">
+       <ul class="navbar-nav ml-auto">
+         <li class="nav-item ">
+           <a class="nav-link" href="/home">Home
+            
+               </a>
+         </li>
+         <!-- <li class="nav-item">
+           <a class="nav-link" href="#">About</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#">Services</a>
+         </li>-->
+         <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+         <li class="nav-item ">
+           <a class="nav-link" href="/contact">Supports & Contact Us</a>
+         </li>
+         <!-- <li class="nav-item"> 
+           <a class="nav-link" routerLink=''>Contact Us</a>
+         </li> -->
+         <li class="nav-item ">
+           <a class="nav-link" routerLink='/login'>User Login  </a>
+         </li>
+         <li class="nav-item active">
+           <a class="nav-link" routerLink='/registration'>User SignUp <span class="sr-only">(current)</span></a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" routerLink='/adminlogin'>Admin Login</a>
+         </li>
+         <!-- <li class="nav-item">
+           <a class="nav-link" routerlink='/adminlogin'>Admin Login</a>
+         </li> -->
+       </ul>
+     </div>
+   </div>
+ </nav>
+</div>
+
+<div class="image">
+  <!-- <img src="assets/img/administrator.jpg" height="640px" width="1111px" align="right"/> -->
+  <img src="assets/img/userimg2.jpg" height="995px" width="1515px" align="right"/>
+</div>
+
+<div class="bg">
+<div style="min-width: 70%;min-height: 100%;">
+    <div class="containers" style="max-width: 1150px;">
+          <h3 class="textual"> User Registration (To create an Account)</h3>
+          <!-- <p>Please fill in this form to create an account.</p> -->
+          <form #Registerform="ngForm" (ngSubmit)="registerUser()">
+            {{Registerform.form.valid}}
+              <!-- <small [class.text-danger]="msg.status==500" >{{msg.message}}</small> -->
+          <hr>
+          <label for="firstName">First Name:</label>
+           <input type="text" class="form-control"  placeholder="Enter firstName" name="firstName" pattern="[A-Za-z]{2,19}" [(ngModel)]="user.firstName" required #firstName="ngModel" 
+           [class.is-invalid]="firstName.invalid && firstName.touched"
+           > 
+           <label for="lastName">Last Name:</label>
+           <input type="text" class="form-control"  placeholder="Enter lastName" name="lastName" pattern="[A-Za-z]{1,19}" [(ngModel)]="user.lastName" required #lastName="ngModel" 
+           [class.is-invalid]="lastName.invalid && lastName.touched"
+           > 
+    
+    
+          <label for="email">Email:</label>
+          <input type="email" class="form-control"  placeholder="Enter email" name="email" [(ngModel)]="user.email" required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" #email="ngModel" 
+          [class.is-invalid]="email.invalid && email.touched"
+          >
+           <!-- <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email is required field</small> -->
+           <div *ngIf="email.errors && (email.invalid && email.touched)"> 
+           
+           <small class="text-danger" *ngIf="email.errors.required" >EmailId is required field</small>
+             <small class="text-danger" *ngIf="email.errors.pattern">Enter valid EmailId</small>
+           </div>
+           <br>
+    
+           <label for="pwd">Password:</label>
+           <input type="password" class="form-control"  placeholder="Enter password" name="password"  [(ngModel)]="user.password" #password="ngModel" required
+           [class.is-invalid]="password.invalid && password.touched"
+           >
+           <small class="text-danger" [class.d-none]="password.valid || password.untouched">password is required field</small>
+           <br>
+           <label for="pwd"> Confirm Password:</label>
+           <input type="password" class="form-control"  placeholder="Enter Confirm password" name="cpassword" #cpassword="ngModel"  [(ngModel)]="user.password"  required
+           [class.is-invalid]="cpassword.invalid && cpassword.touched">
+           <small class="text-danger" [class.d-none]="(cpassword.value == password.value) || cpassword.untouched">password and confirm password is same</small>
+           <br>
+           <p style="color: white;">Gender Select any one:</p>
+           <form>
+            <select name = "dropdown" id="gender" [(ngModel)]="user.gender">
+              <option value="none" selected disabled hidden> 
+                Select an Option 
+            </option>
+               <option value = "MALE">MALE</option>
+               <option value = "FEMALE">FEMALE</option>
+               <option value="OTHERS">OTHERS</option>
+            </select>
+            
+         </form>
+         <!-- <form action="gender" [(ngModel)]="user.gender">
+          <input type="radio" name="gender" value="male"> Male<br>
+          <input type="radio" name="gender" value="female"> Female<br>
+          <input type="radio" name="gender" value="other"> Other
+        </form> -->
+        
+           <label for="mobNo">mobileNumber:</label>
+           <input type="tel" class="form-control"  placeholder="Enter mobNo" name="mobNo" maxlength="10" [(ngModel)]="user.mobileNumber" required #mobNo="ngModel" 
+           [class.is-invalid]="mobNo.invalid && email.touched"
+           >
+           <br>
+           <p style="color: white;">Select the service which your using:</p>
+           <form>
+            <select name = "dropdown" id="gender" [(ngModel)]="user.type">
+              <option value="none" selected disabled hidden> 
+                Select an Option 
+            </option>
+               <option value = "prepaid">Prepaid</option>
+               <option value = "postpaid">Postpaid</option>
+               <option value="dongle">Dongle</option>
+            </select>
+            
+         </form>
+
+           <br>
+           <label for="aadharNo">AadharNumber:</label>
+           <input type="tel" class="form-control"  placeholder="Enter aadharNo" required pattern= "[0-9]+" maxlength="12" name="aadharNo" [(ngModel)]="user.adharNumber" required #aadharNo="ngModel" 
+           [class.is-invalid]="aadharNo.invalid && aadharNo.touched"
+           >
+           <div class="checkbox">
+            <label><input type="checkbox" name="remember"> TERMS AND CONDITION</label>
+          </div>
+    
+           
+          <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+          <small class="float-right" (click)="gotologin()">Already have an account? login here</small>
+          <button [disabled]="Registerform.form.invalid" type="submit" class="btn btn-info">Register</button>
+         
+          </form>
+        </div>
+        
+    
+      </div>
+    </div>

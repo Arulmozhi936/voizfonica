@@ -1,0 +1,82 @@
+
+<div class="bg">
+<div style="min-width: 100%;min-height: 200%;">
+<div class="container" style="max-width: 500px;">
+  <h2 class="textual">New Admin Registration</h2>
+  <p>Please fill in this form to create an account.</p>
+  <form #Registerform="ngForm" (ngSubmit)="registerAdmin()">
+    {{Registerform.form.valid}}
+  <hr>
+  <label for="id">Admin  ID:</label> (*Admin id enter in the format of (YYYYpro000)
+    <input type="text" class="form-control"  placeholder="Enter ID" required pattern="^[2020pro]+[0-9]{3}$" name="id" [(ngModel)]="admins.adminNumber">
+
+    <label for="firstName">First Name:</label>
+     <input type="text" class="form-control"  placeholder="Enter firstName" name="firstName"  [(ngModel)]="admins.firstName" required pattern="[A-Za-z]{2,19}"  #firstName="ngModel" 
+     [class.is-invalid]="firstName.invalid && firstName.touched"
+     > 
+     <label for="lastName">Last Name:</label>
+     <input type="text" class="form-control"  placeholder="Enter lastName" name="lastName" pattern="[A-Za-z]{1,19}" [(ngModel)]="admins.lastName" required #lastName="ngModel" 
+     [class.is-invalid]="lastName.invalid && lastName.touched"
+     > 
+
+
+  <label for="email">Email:</label>
+  <input type="email" class="form-control"  placeholder="Enter email" name="email" [(ngModel)]="admins.email" required pattern="^[a-zA-Z]+[a-zA-Z0-9_]+@gmail+.com+$" #email="ngModel" 
+  [class.is-invalid]="email.invalid && email.touched"
+  >
+   <!-- <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email is required field</small> -->
+   <div *ngIf="email.errors && (email.invalid && email.touched)"> 
+   
+   <small class="text-danger" *ngIf="email.errors.required" >EmailId is required field</small>
+     <small class="text-danger" *ngIf="email.errors.pattern">Enter valid EmailId</small>
+   </div>
+   <br>
+
+   <label for="pwd"> Password:</label>
+   <input type="password" class="form-control"  placeholder="Enter password" name="password"  [(ngModel)]="admins.password" #password="ngModel" required
+   [class.is-invalid]="password.invalid && password.touched"
+   >
+   <small class="text-danger" [class.d-none]="password.valid || password.untouched">password is required field</small>
+   <br>
+   <p>Gender Select any one:</p>
+   <form>
+    <select name = "dropdown" [(ngModel)]="admins.gender">
+       <option value = "MALE">MALE</option>
+       <option value = "FEMALE">FEMALE</option>
+       <option value="OTHERS">OTHERS</option>
+       
+    </select>
+ </form>
+   <label for="mobNo" >
+     Mobile No:
+    </label>
+   <input type="tel" class="form-control"  placeholder="Enter mobNo" name="mobNo" maxlength="10" [(ngModel)]="admins.mobileNumber" required #mobNo="ngModel" 
+   [class.is-invalid]="mobNo.invalid && email.touched"
+   >
+   <br>
+   <label for="aadharNo">Aadhaar NO:</label>
+   <input type="tel" class="form-control"  placeholder="Enter aadharNo" name="aadharNo" required pattern= "[0-9]+" maxlength="12" [(ngModel)]="admins.adharNumber" required #aadharNo="ngModel" 
+   [class.is-invalid]="aadharNo.invalid && aadharNo.touched"
+   >
+   <div class="checkbox">
+    <label><input type="checkbox" name="remember"> TERMS AND CONDITION</label>
+  </div>
+  <!-- <div class="form-group">
+    <div class="col-md-6">
+      <img alt="captcha" src="C:\Users\arulm\Desktop\New_folder_(2)\voizfonica\voizfonica\src\main\java\com\iprimed\voizfonica\servlet\CaptchaServlet.java">
+    </div>
+    <div class="col-md-6">
+      <input type="text" class="form-control" path="captcha" placeholder="Enter the captcha" required="true"/>
+    </div>
+  </div> -->
+
+   
+  <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+  <button [disabled]="Registerform.form.invalid" type="submit" class="btn btn-info">Register</button>
+  </form>
+
+</div>
+</div>
+
+</div> 

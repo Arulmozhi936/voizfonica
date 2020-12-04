@@ -1,0 +1,94 @@
+<div class="container-fluid sticky-nav-wrapper" style="background-color: #204d81;height: 80px;width: 100%;">
+  <nav class="navbar navbar-expand-lg navbar-dark  static-top">
+   <div class="container">
+     <a class="navbar-brand" href="#">
+           <img src="/assets/img/logo.jpeg" height="58px" width="58px" alt="logo">
+         </a>
+         <h1 style="color: white;">VOIZFONICA</h1>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+     <div class="collapse navbar-collapse" id="navbarResponsive">
+       <ul class="navbar-nav ml-auto">
+         <li class="nav-item ">
+           <a class="nav-link" href="/home">Home
+            
+               </a>
+         </li>
+         <!-- <li class="nav-item">
+           <a class="nav-link" href="#">About</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#">Services</a>
+         </li>-->
+         <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+         <li class="nav-item ">
+           <a class="nav-link" href="/contact">Supports & Contact Us</a>
+         </li>
+         <!-- <li class="nav-item"> 
+           <a class="nav-link" routerLink=''>Contact Us</a>
+         </li> -->
+         
+         <li class="nav-item active">
+           <a class="nav-link" routerLink='/login'>User Login  <span class="sr-only">(current)</span></a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" routerLink='/registration'>User SignUp</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" routerLink='/adminlogin'>Admin Login</a>
+         </li>
+         <!-- <li class="nav-item">
+           <a class="nav-link" routerlink='/adminlogin'>Admin Login</a>
+         </li> -->
+       </ul>
+     </div>
+   </div>
+ </nav>
+</div>
+<div class="image">
+  <!-- <img src="assets/img/administrator.jpg" height="640px" width="1111px" align="right"/> -->
+  <img src="assets/img/strip.jpg" height="645px" width="1119px" align="right"/>
+</div>
+
+<div class="bg">
+<div class="containers" style="max-width: 700px; ">
+    <h2>WELCOME TO VOIZFONICA</h2>
+    <form #loginform="ngForm" (ngSubmit)="loginUser()">
+      {{loginform.form.valid}}
+      <small class="text-danger">{{msg}}</small>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control"  placeholder="Enter email" name="email" [(ngModel)]="user.email" required pattern="^[a-zA-Z]+[a-zA-Z0-9_]+@gmail+.com+$" #email="ngModel" 
+        [class.is-invalid]="email.invalid && email.touched"
+        >
+         <!-- <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email is required field</small> -->
+         <div *ngIf="email.errors && (email.invalid && email.touched)"> 
+         
+         <small class="text-danger" *ngIf="email.errors.required" >EmailId is required field</small>
+           <small class="text-danger" *ngIf="email.errors.pattern">Enter valid EmailId</small>    
+          </div> 
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control"  placeholder="Enter password" name="password"  [(ngModel)]="user.password" #password="ngModel" required
+        [class.is-invalid]="password.invalid && password.touched">
+        <small class="text-danger" [class.d-none]="password.valid || password.untouched">password is required field</small>
+      </div>
+      
+      <div class="checkbox">
+        <label><input type="checkbox" name="remember"> TERMS AND CONDITION</label>
+      </div>
+      <span class="psw"> <a href="/forgotpassword" style="color:black;"> Forgot password?</a></span>
+      <br>
+      <button [disabled]="loginform.form.invalid" type="submit" class="btn btn-info">LOGIN</button>
+    </form>
+  <small class="float-right" (click)="gotoregistration()"> <a  routerLink="/registration" routerLinkActive="router-link-active" > <strong style="color:black;">New user ? Register here</strong></a> </small>
+    <br>
+  </div>
+</div>
+
+
+  <router-outlet></router-outlet>

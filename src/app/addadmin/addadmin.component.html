@@ -1,0 +1,74 @@
+<div class="bg">
+<div class="container" style="max-width: 500px;">
+    <h2 class="textual">Add Admin</h2>
+    <p>Please fill in this form to create an account.</p>
+    <form #addadminForm="ngForm" (ngSubmit)="addadminFormsubmit()">
+    <hr>
+    <label for="id">Admin  ID:</label> (*Admin id enter in the format of (YYYYproxxx)
+    <input type="text" class="form-control"  placeholder="Enter ID" name="id" required pattern="^[2020pro]+[0-9]{3}$" [(ngModel)]="admins.adminNumber">
+
+    <label for="firstName">First Name:</label>
+     <input type="text" class="form-control"  placeholder="Enter firstName" name="firstName"  [(ngModel)]="admins.firstName" required pattern="[A-Za-z]{2,19}"  #firstName="ngModel" 
+     [class.is-invalid]="firstName.invalid && firstName.touched"
+     > 
+     <label for="lastName">Last Name:</label>
+     <input type="text" class="form-control"  placeholder="Enter lastName" name="lastName" pattern="[A-Za-z]{1,19}" [(ngModel)]="admins.lastName" required #lastName="ngModel" 
+     [class.is-invalid]="lastName.invalid && lastName.touched"
+     > 
+
+
+    <label for="email">Email:</label>
+    <input type="email" class="form-control"  placeholder="Enter email" name="email" [(ngModel)]="admins.email" required pattern="^[a-zA-Z]+[a-zA-Z0-9_]+@gmail+.com+$" #email="ngModel" 
+    [class.is-invalid]="email.invalid && email.touched"
+    >
+     <!-- <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email is required field</small> -->
+     <div *ngIf="email.errors && (email.invalid && email.touched)"> 
+     
+     <small class="text-danger" *ngIf="email.errors.required" >EmailId is required field</small>
+       <small class="text-danger" *ngIf="email.errors.pattern">Enter valid EmailId</small>
+     </div>
+     <br>
+
+     <label for="pwd">Password:</label>
+     <input type="password" class="form-control"  placeholder="Enter password" name="password"  [(ngModel)]="admins.password" #password="ngModel" required
+     [class.is-invalid]="password.invalid && password.touched"
+     >
+     <small class="text-danger" [class.d-none]="password.valid || password.untouched">password is required field</small>
+     <br>
+     <label for="pwd"> Confirm Password:</label>
+     <input type="password" class="form-control"  placeholder="Enter Confirm password" name="cpassword" #cpassword="ngModel"  [(ngModel)]="admins.password"  required
+     [class.is-invalid]="cpassword.invalid && cpassword.touched"
+     >
+     <small class="text-danger" [class.d-none]="(cpassword.value == password.value) || cpassword.untouched">password and confirm password is same</small>
+     <br>
+     <p>Gender Select any one:</p>
+     <form>
+      <select name = "dropdown" [(ngModel)]="admins.gender">
+         <option value = "MALE" selected>MALE</option>
+         <option value = "FEMALE">FEMALE</option>
+         <option value="OTHERS">OTHERS</option>
+         
+      </select>
+   </form>
+     <label for="mobileNumber">mobNo:</label>
+     <input type="tel" class="form-control"  placeholder="Enter mobileNumber" name="mobileNumber" maxlength="10" [(ngModel)]="admins.mobileNumber" required #mobNo="ngModel" 
+     >
+     <br>
+     <label for="adharNumber">Aadhaar NO:</label>
+     <input type="tel" class="form-control"  placeholder="Enter adharNumber" required pattern= "[0-9]+" maxlength="13" name="adharNumber" [(ngModel)]="admins.adharNumber" required #aadharNo="ngModel" 
+  
+     >
+     <div class="checkbox">
+      <label><input type="checkbox" name="remember"> TERMS AND CONDITION</label>
+    </div>
+
+     
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button [disabled]="addadminForm.form.invalid" type="submit" class="btn btn-danger">SUBMIT</button>
+
+    </form>
+  </div>
+
+</div>
+<router-outlet></router-outlet>

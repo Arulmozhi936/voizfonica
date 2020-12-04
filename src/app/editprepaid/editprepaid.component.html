@@ -1,0 +1,70 @@
+<div class="container-fluid sticky-nav-wrapper" style="background-color: #204d81;height: 80px;width: 100%;">
+    <nav class="navbar navbar-expand-lg navbar-dark  static-top">
+     <div class="container">
+       <a class="navbar-brand" href="#">
+             <img src="/assets/img/logo.jpeg" height="58px" width="58px" alt="logo">
+           </a>
+           <h1 style="color: white;">VOIZFONICA</h1>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="/admindashboard">Home
+                     
+                    </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/adminquery">Customer Queries</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/userlist">Customer's Details</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="/adminlist">Admin's Details</a>
+              </li> -->
+              <li class="nav-item active">
+                <a class="nav-link" href="/prepaidlist">Offers and Packs  <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item"> 
+                <a class="nav-link" href='/home'>Logout</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href='/profile'>
+                 <br>
+                  
+                </a>
+              </li>
+            </ul>
+          </div>
+     </div>
+   </nav>
+  </div>
+<!----prepaid-->
+<div class="color" style="background-color: #8db4be;">
+<div class="container">
+    <h2><b>Update prepaid</b></h2>
+    <form #adduserform="ngForm" (ngSubmit)="updatePrepaidformsubmit()">
+       
+        <div class="form-group">
+            <label for="id">id:</label>
+            <input type="text" class="form-control" required [(ngModel)]="prepaid.id" name="id" disabled>
+        </div>
+        <div class="form-group">
+            <label for="emailId:">Price:</label>
+            <input type="text" class="form-control" required [(ngModel)]="prepaid.emailId" name="emailId">
+        </div>
+        <div class="form-group">
+            <label for="userName">Validity:</label>
+            <input type="text" class="form-control" required [(ngModel)]="prepaid.userName" name="userName">
+        </div>
+        <div class="form-group">
+        <label for="password">Plan:</label>
+        <input type="text" class="form-control" required [(ngModel)]="prepaid.password" name="password">
+    </div>
+    <button type="submit" class="btn btn-success">Update plan</button>
+    <button type="button" class="btn btn-primary" (click)="gotolistprepaid()">back</button>
+    </form>
+</div> <br><br><br> <br><br><br> <br><br><br>
+</div>

@@ -1,0 +1,21 @@
+p{
+    color:black;
+  font-size: 20px;
+}
+.nav-item{
+  font-size: 18px;
+  padding: 5px;
+  text-align: right;
+}
+/* .carousal-inner{
+  width:1518px;
+  height:500px;
+} */
+
+.carousel-caption {
+  width: 300px;
+  margin-bottom: -20px;
+  border-radius: 5%;
+  margin-left: -150px;
+  ;
+}

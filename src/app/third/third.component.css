@@ -1,0 +1,17 @@
+.tl{
+    float: left;
+    color: black;
+}
+.tr{
+    float: right;
+    color: black;
+    
+}
+a:link{
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+p{
+    color: black;
+}
